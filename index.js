@@ -4,8 +4,8 @@
  */
 
 'use strict';
-const convertFont = require('./lib/converter');
+const convertFont = require('./converter');
 
 module.exports = {
-  convertFont,
+  convertFont
 };
