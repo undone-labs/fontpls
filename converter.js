@@ -1,9 +1,10 @@
 'use strict';
-const Fontmin = require('fontmin');
-const fs = require('fs');
-const path = require('path');
 
-function convertFont(inputPath) {
+import Fontmin from 'fontmin';
+import fs from 'fs';
+import path from 'path';
+
+export function convertFont(inputPath) {
   const ext = path.extname(inputPath);
   if (ext !== '.ttf' && ext !== '.otf') {
     console.error('Invalid file extension. Only .ttf and .otf are supported.');

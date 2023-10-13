@@ -12,6 +12,7 @@
         "url": "https://github.com/undone-labs/fontpls/issues"
     },
     "license": "APL-2.0",
+    "type": "module",
     "main": "index.js",
     "engines": {
         "node": ">=10.0.0"

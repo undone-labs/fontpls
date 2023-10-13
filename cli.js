@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 'use strict';
-const convertFont = require('./converter');
-const path = require('path');
+
+import { convertFont } from './converter.js';
+import path from 'path';
 
 const inputPath = process.argv[2];
 
