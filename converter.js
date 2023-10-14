@@ -35,5 +35,3 @@ export function convertFont(inputPath) {
     console.log('Fonts converted successfully!');
   });
 }
-
-module.exports = convertFont;
