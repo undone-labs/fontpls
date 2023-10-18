@@ -1,12 +1,21 @@
 # `fontpls`
 
-
 A typeface conversion tool for making webfonts, accessible via most CLIs
+
+```mermaid
+flowchart LR;
+    A(TTF or OTF) --> B{{fontpls}}
+    B --> C(WOFF2)
+    B --> D(EOT)
+    B --> E(SVG)
+```
 
 ## Usage
 
-The following command should be run in the CLI. The `$1` value must be a `.otf` or `.ttf` file:
-`fontpls /path/to/file.otf`
+#### `fontpls /path/to/file.otf`
+
+The above command should be run in the CLI. The input (`$1`) value must be a `.otf` or `.ttf` file.
+
 
 If successful, the new font files (`.svg`, `.eot`, `.woff2`) will be written to the same directory that the original TrueType or OpenType font was in.
 

@@ -3,6 +3,11 @@
 
 import { convertFont } from './converter.js';
 import path from 'path';
+import chalk from 'chalk';
+import inquirer from 'inquirer';
+import gradient from 'gradient-string';
+import chalkAnimation from 'chalk-animation';
+import figlet from 'figlet';
 
 const inputPath = process.argv[2];
 
