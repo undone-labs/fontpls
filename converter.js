@@ -2,6 +2,7 @@
 
 import Fontmin from 'fontmin';
 import rename from 'gulp-rename';
+import fs from 'fs'
 import path from 'path';
 
 export function convertFont(inputPath) {
@@ -30,6 +31,12 @@ export function convertFont(inputPath) {
         console.error('Error during conversion:', err);
         return;
       }
+      const ttfFile = files.find((file, i) => {
+        return file.path.includes('ttf', (file.path.length - 3))
+      })
+      if (ttfFile) {
+        fs.unlink(ttfFile.path, err => { if (err) { console.log('Error during ttf file removal: ', err) }})
+      }
       console.log('Fonts converted successfully!');
     });
   }
@@ -41,7 +48,7 @@ export function convertFont(inputPath) {
 
     otfFontmin.run((err, files) => {
       if (err) {
-        console.error('Error during .otf to .ttf conversion:', err);
+        console.error('Error during .otf to .ttf conversion: ', err);
         return;
       }
       files.forEach(file => {
