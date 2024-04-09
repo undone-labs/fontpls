@@ -15,9 +15,9 @@ export function convertFont(inputPath) {
   const outputPath = path.dirname(inputPath);
   const fileName = path.basename(inputPath, ext);
 
-  const convertFiles = (input, outputDirectory) => {
+  const convertFiles = (input, outputDirectory, deleteTtf = false) => {
     const fontmin = new Fontmin()
-      .src(input)
+      .src(input.contents || input)
       .use(rename((path) => {
         path.basename = fileName
       }))
@@ -31,11 +31,8 @@ export function convertFont(inputPath) {
         console.error('Error during conversion:', err);
         return;
       }
-      const ttfFile = files.find((file, i) => {
-        return file.path.includes('ttf', (file.path.length - 3))
-      })
-      if (ttfFile) {
-        fs.unlink(ttfFile.path, err => { if (err) { console.log('Error during ttf file removal: ', err) }})
+      if (deleteTtf) {
+        fs.unlink(input.path, err => { if (err) { console.log('Error during ttf file removal: ', err) }})
       }
       console.log('Fonts converted successfully!');
     });
@@ -52,7 +49,7 @@ export function convertFont(inputPath) {
         return;
       }
       files.forEach(file => {
-        convertFiles(file.contents, outputPath);
+        convertFiles(file, outputPath, true);
       });
     });
   } else {
