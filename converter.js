@@ -32,7 +32,7 @@ export function convertFont(inputPath) {
         return;
       }
       if (deleteTtf) {
-        fs.unlink(input.path, err => { if (err) { console.log('Error during ttf file removal: ', err) }})
+        fs.unlink(input.path, err => { if (err) { console.error('Error during ttf file removal: ', err) }})
       }
       console.log('Fonts converted successfully!');
     });
