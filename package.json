@@ -1,7 +1,7 @@
 {
   "name": "@undone-labs/fontpls",
   "description": "A typeface conversion CLI tool for making webfonts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/undone-labs/fontpls",
   "author": {
     "name": "Undone Labs",
