@@ -1,9 +1,22 @@
 {
-    "name": "fontpls",
+    "name": "@undone-labs/fontpls",
     "description": "A typeface conversion CLI tool for making webfonts",
     "version": "1.0.0",
     "homepage": "https://github.com/undone-labs/fontpls",
-    "author": "Orun Bhuiyan (https://github.com/orvn)",
+    "author": {
+      "name": "Undone Labs",
+      "email": "hello@undonelabs.com"
+    },
+    "contributors": [
+      {
+        "name": "Orun Bhuiyan",
+        "url": "https://github.com/orvn"
+      },
+      {
+        "name": "tikagan",
+        "url": "https://github.com/tikagan"
+      }
+    ],
     "repository": {
         "type": "git",
         "url": "git+https://github.com/undone-labs/fontpls.git"
