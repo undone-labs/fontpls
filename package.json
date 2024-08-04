@@ -1,5 +1,5 @@
 {
-  "name": "@undone-labs/fontpls",
+  "name": "fontpls",
   "description": "A typeface conversion CLI tool for making webfonts",
   "version": "1.0.1",
   "homepage": "https://github.com/undone-labs/fontpls",
